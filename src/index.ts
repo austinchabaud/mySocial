@@ -11,7 +11,6 @@ import { PostResolver } from './resolvers/post';
 const main = async () => {
 	const orm = await MikroORM.init(microConfig);
 	await orm.getMigrator().up();
-
 	const app = express();
 
 	const apolloServer = new ApolloServer({
